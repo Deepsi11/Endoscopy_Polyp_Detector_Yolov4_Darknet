@@ -907,19 +907,12 @@ if ($BuildInstaller) {
 
 if (($ForceOpenCVVersion -eq 2) -and $UseVCPKG) {
   Write-Host "You requested OpenCV version 2, so vcpkg will install that version" -ForegroundColor Yellow
-  Write-Host "This requires using vcpkg.json.opencv23 as manifest file" -ForegroundColor Yellow
   $AdditionalBuildSetup = $AdditionalBuildSetup + " -DVCPKG_USE_OPENCV4=OFF -DVCPKG_USE_OPENCV2=ON"
 }
 
 if (($ForceOpenCVVersion -eq 3) -and $UseVCPKG) {
   Write-Host "You requested OpenCV version 3, so vcpkg will install that version" -ForegroundColor Yellow
-  Write-Host "This requires using vcpkg.json.opencv23 as manifest file" -ForegroundColor Yellow
   $AdditionalBuildSetup = $AdditionalBuildSetup + " -DVCPKG_USE_OPENCV4=OFF -DVCPKG_USE_OPENCV3=ON"
-}
-
-if($ForceOpenCVVersion -gt 0) {
-  Move-Item $PSCustomScriptRoot/vcpkg.json $PSCustomScriptRoot/vcpkg.json.bak
-  Move-Item $PSCustomScriptRoot/vcpkg.json.opencv23 $PSCustomScriptRoot/vcpkg.json
 }
 
 if ($UseVCPKG -and $ForceVCPKGCacheRemoval) {
@@ -1173,11 +1166,6 @@ if ($vcpkg_triplet_set_by_this_script) {
 }
 if ($vcpkg_host_triplet_set_by_this_script) {
   $env:VCPKG_DEFAULT_HOST_TRIPLET = $null
-}
-
-if($ForceOpenCVVersion -gt 0) {
-  Move-Item $PSCustomScriptRoot/vcpkg.json $PSCustomScriptRoot/vcpkg.json.opencv23
-  Move-Item $PSCustomScriptRoot/vcpkg.json.bak $PSCustomScriptRoot/vcpkg.json
 }
 
 if ($vcpkg_branch_set_by_this_script) {
