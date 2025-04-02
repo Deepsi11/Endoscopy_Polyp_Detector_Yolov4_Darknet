@@ -131,19 +131,19 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-cuda-${{ runner.os }}
+        name: cfg
         path: cfg
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-cuda-${{ runner.os }}
+        name: data
         path: data
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-cuda-${{ runner.os }}
+        name: darknet-vcpkg-cuda-${{ runner.os }}-darknet
         path: ${{ github.workspace }}/*dark*
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-cuda-${{ runner.os }}
+        name: darknet-vcpkg-cuda-${{ runner.os }}-uselib
         path: ${{ github.workspace }}/uselib*
 
 
@@ -246,19 +246,11 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-${{ runner.os }}
-        path: cfg
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-${{ runner.os }}
-        path: data
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-${{ runner.os }}
+        name: darknet-${{ runner.os }}-darknet
         path: ${{ github.workspace }}/*dark*
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-${{ runner.os }}
+        name: darknet-${{ runner.os }}-uselib
         path: ${{ github.workspace }}/uselib*
 
 
@@ -295,19 +287,11 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-cuda-${{ runner.os }}
-        path: cfg
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-cuda-${{ runner.os }}
-        path: data
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-cuda-${{ runner.os }}
+        name: darknet-cuda-${{ runner.os }}-darknet
         path: ${{ github.workspace }}/*dark*
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-cuda-${{ runner.os }}
+        name: darknet-cuda-${{ runner.os }}-uselib
         path: ${{ github.workspace }}/uselib*
 
 
@@ -397,19 +381,11 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-${{ runner.os }}
-        path: cfg
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-vcpkg-${{ runner.os }}
-        path: data
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-vcpkg-${{ runner.os }}
+        name: darknet-vcpkg-${{ runner.os }}-darknet
         path: ${{ github.workspace }}/*dark*
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-${{ runner.os }}
+        name: darknet-vcpkg-${{ runner.os }}-uselib
         path: ${{ github.workspace }}/uselib*
 
 
@@ -429,19 +405,11 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-${{ runner.os }}
-        path: cfg
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-${{ runner.os }}
-        path: data
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-${{ runner.os }}
+        name: darknet-${{ runner.os }}-darknet
         path: ${{ github.workspace }}/*dark*
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-${{ runner.os }}
+        name: darknet-${{ runner.os }}-uselib
         path: ${{ github.workspace }}/uselib*
 
 
@@ -493,23 +461,15 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-${{ runner.os }}
-        path: cfg
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-vcpkg-${{ runner.os }}
-        path: data
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-vcpkg-${{ runner.os }}
+        name: darknet-vcpkg-${{ runner.os }}-darknet
         path: ${{ github.workspace }}/*dark*
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-${{ runner.os }}
+        name: darknet-vcpkg-${{ runner.os }}-dlls
         path: ${{ github.workspace }}/build_release/*.dll
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-vcpkg-${{ runner.os }}
+        name: darknet-vcpkg-${{ runner.os }}-uselib
         path: ${{ github.workspace }}/uselib*
 
 
@@ -555,23 +515,15 @@ jobs:
 
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-${{ runner.os }}
-        path: cfg
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-${{ runner.os }}
-        path: data
-    - uses: actions/upload-artifact@v4
-      with:
-        name: darknet-${{ runner.os }}
+        name: darknet-${{ runner.os }}-intlibs-darknet
         path: ${{ github.workspace }}/*dark*
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-${{ runner.os }}
+        name: darknet-${{ runner.os }}-intlibs-dlls
         path: ${{ github.workspace }}/3rdparty/pthreads/bin/*.dll
     - uses: actions/upload-artifact@v4
       with:
-        name: darknet-${{ runner.os }}
+        name: darknet-${{ runner.os }}-intlibs-uselib
         path: ${{ github.workspace }}/uselib*
 
 
