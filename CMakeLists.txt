@@ -515,6 +515,21 @@ if(OpenCV_FOUND)
   target_include_directories(dark PRIVATE ${OpenCV_INCLUDE_DIRS})
   target_compile_definitions(darknet PRIVATE -DOPENCV)
   target_compile_definitions(dark PUBLIC -DOPENCV)
+
+  if(OpenCV_VERSION VERSION_LESS "4.0.0")
+    find_package(Freetype REQUIRED)
+    # Link FreeType library to resolve undefined symbols in HarfBuzz, Cairo, and FontConfig
+    if(TARGET Freetype::Freetype)
+      target_link_libraries(darknet PRIVATE Freetype::Freetype)
+      target_link_libraries(dark PUBLIC Freetype::Freetype)
+      target_link_libraries(uselib PRIVATE Freetype::Freetype)
+    elseif(TARGET freetype)
+      target_link_libraries(darknet PRIVATE freetype)
+      target_link_libraries(dark PUBLIC freetype)
+      target_link_libraries(uselib PRIVATE freetype)
+    endif()
+  endif()
+
 endif()
 
 if(OPENMP_FOUND)
