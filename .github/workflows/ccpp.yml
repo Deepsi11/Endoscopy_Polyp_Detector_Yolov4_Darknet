@@ -383,7 +383,7 @@ jobs:
       if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.debug_enabled }}
 
     - name: Install dependencies
-      run: brew install libomp yasm nasm pkg-config automake autoconf-archive
+      run: brew install libomp yasm nasm pkg-config automake autoconf-archive mono
 
     - uses: lukka/get-cmake@latest
 

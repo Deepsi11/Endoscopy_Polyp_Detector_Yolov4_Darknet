@@ -290,7 +290,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install dependencies
-      run: brew install libomp yasm nasm pkg-config automake autoconf-archive
+      run: brew install libomp yasm nasm pkg-config automake autoconf-archive mono
 
     - uses: lukka/get-cmake@latest
 
