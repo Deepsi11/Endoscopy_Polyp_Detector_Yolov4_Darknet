@@ -1,6 +1,6 @@
 # Endoscopy Polyp Detector using YOLOv4 Darknet
 
-This repository contains a complete YOLOv4 implementation for detecting polyps in endoscopy images using the Darknet framework. This is a demonstration of a polyp detection model inspired by work I’ve done professionally for real time endoscopy feeds. 
+This is a demonstration of a polyp detection model inspired by work I’ve done professionally for real time endoscopy feeds using the YOLOV4 DARKNET.
 
 ## 🚀 Quick Start
 
