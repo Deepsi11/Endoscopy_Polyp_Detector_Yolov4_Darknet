@@ -1,6 +1,6 @@
 # Endoscopy Polyp Detector using YOLOv4 Darknet
 
-This repository contains a complete YOLOv4 implementation for detecting polyps in endoscopy images using the Darknet framework.
+This repository contains a complete YOLOv4 implementation for detecting polyps in endoscopy images using the Darknet framework. This is a demonstration of a polyp detection model inspired by work I’ve done professionally for real time endoscopy feeds. 
 
 ## 🚀 Quick Start
 
@@ -51,13 +51,16 @@ wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optim
 ```
 ├── cfg/
 │   ├── yolov4-custom.cfg      # Custom YOLOv4 configuration for polyp detection
-│   └── polyp.data             # Dataset configuration
 ├── backup/                    # Trained model weights
 │   ├── yolov4-custom_best.weights
 │   └── yolov4-custom_final.weights
 ├── data/
-│   └── polyp.names           # Class names file
-├── process.py                # Data processing utilities
+│    └── Images + Labels.txt   # Data Set Up
+│    └── polyp.data
+│    └── polyp.names
+│    └── train.txt
+│    └── test.txt
+├── process.py                # To create train.txt and test.txt
 ├── bad.list                  # List of bad training images
 └── README_POLYP_DETECTION.md # This file
 ```
@@ -103,4 +106,20 @@ Feel free to submit issues and enhancement requests!
 
 ## 📄 License
 
-This project uses the Darknet framework. Please refer to the original Darknet license.
+Copyright (c) 2025 Deepsi
+
+All Rights Reserved.
+
+This repository and its contents are made available solely for **educational and demonstration purposes**.  
+The code, documentation, and associated materials herein are intended to showcase the author's technical work and are not licensed for use, reproduction, modification, or distribution in any form.
+
+This project was developed as a **sample representation** of work conducted under a **non-disclosure agreement (NDA)** and therefore **does not include or disclose any proprietary data, models, or intellectual property** belonging to the NDA-bound organization.
+
+By accessing this repository, you agree that:
+- You may view and reference the content for **personal, non-commercial learning** only.
+- You may **not copy, modify, reproduce, or distribute** any part of this repository.
+- You may **not use** this work for research, publication, or commercial applications.
+
+Any unauthorized use, reproduction, or redistribution of this material is strictly prohibited.
+
+For permissions beyond this scope, please contact the author directly.
